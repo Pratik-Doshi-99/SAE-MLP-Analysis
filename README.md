@@ -1,4 +1,4 @@
-# Analyzing Sparse Encoders and the underling MLP Layer
+# Analyzing Sparse Autoencoders and the underling MLP Layers
 
 Google Colab Link [here](https://colab.research.google.com/drive/1\_hvruCSTxb9NprC7HTJpkTr\_aL65R2Fk?usp=sharing) for the project.
 
