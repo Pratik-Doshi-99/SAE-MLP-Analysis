@@ -65,6 +65,7 @@ This is an indirect and much less rigorous way (statistically) of determining im
 The size of the dataset is a major hurdle to the Linear Probing task. Owing to the large embedding dimensions, and low sample count, the probe ends up memorizing the mapping. Despite a poor selectivity score for both the MLP and SAE activations, the MLP activations have consistently higher selectivity, implying that the SAE fails to capture the feature correctly. The selectivity metric is computed across several control tasks (each task representing a different random class assignment).
 
 ![Probing Results](assets/selectivity.png) 
+
 For the given dataset, the MLP Selectivity is higher, implying that the SAE is poorly trained (as evidenced by the given feature). A typical test for the effectiveness of the SAE would be to test this metric on a set of defined features.
 
 ### Logistic Regression \- Failed to converge
@@ -74,6 +75,7 @@ The logistic regression failed to converge, most likely because of the small siz
 ### Neuron-wise t-test
 
 ![T Test Results](assets/t_test.png)
+
 At 99.999% significance level, 9 MLP neurons and 2 SAE neurons were significant. Those neurons are listed in Annexure 2\. Here is the distribution of the p-values for the difference between neuron activations for the two genders.
 
 The distributions confirm our original hypothesis. It is very evident that in the case of the SAE, fewer neurons yield statistically significant results (more localization). The shorter height of the SAE histogram in comparison to the MLP histogram allows us to arrive at that conclusion without setting any confidence level per neuron. Although this indicates better feature localization, it doesn't confirm whether there is any loss of information. This result helps with Objective 1 but not with Objective 2\.
